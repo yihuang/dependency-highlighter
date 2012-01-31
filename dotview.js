@@ -57,12 +57,12 @@ $(function(){
         }
         console.log(this);
         var tohl = [this]
-        $.map($(this).data('input'), function(edge){
+        $.map($(this).data('input')||[], function(edge){
             var elm = $('#'+edge);
             tohl.push( elm[0] );
             tohl.push( $('#'+elm.data('from'))[0] );
         });
-        $.map($(this).data('output'), function(edge){
+        $.map($(this).data('output')||[], function(edge){
             var elm = $('#'+edge);
             tohl.push( elm[0] );
             tohl.push( $('#'+elm.data('to'))[0] );
