@@ -26,7 +26,6 @@ function build() {
 }
 
 function highlight(g) {
-    console.log(g);
     var self;
     if( $.type(g) === 'string' ) {
         self = $('#'+g);
@@ -55,7 +54,6 @@ $(function(){
         if($(this).attr('class')==='graph') {
             return;
         }
-        console.log(this);
         var tohl = [this]
         $.map($(this).data('input')||[], function(edge){
             var elm = $('#'+edge);
